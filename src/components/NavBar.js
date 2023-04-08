@@ -1,0 +1,82 @@
+import Link from "next/link";
+import React, { useContext, useEffect, useState } from "react";
+import {
+  GithubIcon,
+  InstaIcon,
+  LinkedInIcon,
+  MoonIcon,
+  SunIcon,
+} from "./Icons";
+import ThemeContext from "@/theme/ThemeProvider";
+const NavBar = () => {
+  const { theme, toggle } = useContext(ThemeContext);
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  return (
+    <header
+      className="
+      w-full flex items-center justify-between 
+      px-32 py-8 font-medium z-10 dark:text-light
+      lg:px-16 relative z-1 md:px-12 sm:px-8"
+    >
+      <div className="w-full flex justify-between items-center lg:hidden">
+        <nav className="flex items-center justify-center gap-8">
+          <Link
+            className="rounded relative group lg:text-light lg:dark:text-dark "
+            href={"/"}
+          >
+            Home
+          </Link>
+          <Link
+            className="rounded relative group lg:text-light lg:dark:text-dark"
+            href={"/about"}
+          >
+            About
+          </Link>
+          <Link
+            className="rounded relative group lg:text-light lg:dark:text-dark"
+            href={"/projects"}
+          >
+            Projects
+          </Link>
+        </nav>
+        <nav className="flex items-center justify-center flex-wrap lg:mt-2 gap-4">
+          <Link
+            className="hover:translate-y-[-4px] transition-transform duration-200 ease-in"
+            href={"https://github.com/aram1l7"}
+            target="_blank"
+          >
+            <GithubIcon />
+          </Link>
+          <Link
+            className="hover:translate-y-[-4px] transition-transform duration-200 ease-in"
+            href={"https://instagram.com/aram333____"}
+            target="_blank"
+          >
+            <InstaIcon />
+          </Link>
+          <Link
+            className="hover:translate-y-[-4px] transition-transform duration-200 ease-in"
+            href={"https://www.linkedin.com/in/aram-m19/"}
+            target="_blank"
+          >
+            <LinkedInIcon />
+          </Link>
+          <button
+            className={
+              "rounded-full p-1 border-none bg-black text-white dark:bg-white dark:text-black"
+            }
+            onClick={toggle}
+          >
+            {mounted && (theme === "light" ? <SunIcon /> : <MoonIcon />)}
+          </button>
+        </nav>
+      </div>
+    </header>
+  );
+};
+
+export default NavBar;
