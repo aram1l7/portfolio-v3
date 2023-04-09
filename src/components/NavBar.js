@@ -8,12 +8,16 @@ import {
   SunIcon,
 } from "./Icons";
 import ThemeContext from "@/theme/ThemeProvider";
+import { useRouter } from "next/router";
+
 const NavBar = () => {
   const { theme, toggle } = useContext(ThemeContext);
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  const router = useRouter();
 
   return (
     <header
@@ -29,18 +33,45 @@ const NavBar = () => {
             href={"/"}
           >
             Home
+            <span
+              className={`
+              inline-block h-[1px] ${
+                router.asPath === "/" ? "w-full" : "w-0"
+              }  bg-dark absolute left-0 -bottom-0.5 
+              group-hover:w-full transition-[width] ease-in duration-300 dark:bg-light
+               lg:bg-light lg:dark:bg-dark
+              `}
+            ></span>
           </Link>
           <Link
             className="rounded relative group lg:text-light lg:dark:text-dark"
             href={"/about"}
           >
             About
+            <span
+              className={`
+              inline-block h-[1px] ${
+                router.asPath === "/about" ? "w-full" : "w-0"
+              }  bg-dark absolute left-0 -bottom-0.5 
+              group-hover:w-full transition-[width] ease duration-300 dark:bg-light
+              w-full lg:bg-light lg:dark:bg-dark
+              `}
+            ></span>
           </Link>
           <Link
             className="rounded relative group lg:text-light lg:dark:text-dark"
             href={"/projects"}
           >
             Projects
+            <span
+              className={`
+              inline-block h-[1px] ${
+                router.asPath === "/projects" ? "w-full" : "w-0"
+              }  bg-dark absolute left-0 -bottom-0.5 
+              group-hover:w-full transition-[width] ease duration-300 dark:bg-light
+              w-full lg:bg-light lg:dark:bg-dark
+              `}
+            ></span>
           </Link>
         </nav>
         <nav className="flex items-center justify-center flex-wrap lg:mt-2 gap-4">
