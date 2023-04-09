@@ -1,3 +1,4 @@
+import { ContactIcon } from "@/components/Icons";
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
@@ -23,7 +24,7 @@ export default function Home() {
               <h1
                 className="inline-block text-dark dark:text-light
       font-bold w-full !text-left !text-6xl xl:!text-5xl 
-      lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
+      lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl animate-fade"
               >
                 Crafting Interactive Experiences with Pixel Perfect Precision!
               </h1>
@@ -33,6 +34,17 @@ export default function Home() {
               cutting-edge web development. Explore my latest projects
               showcasing my expertise in React.js and web development.
             </p>
+            <div className="mt-2 flex items-center self-start lg:self-center">
+              <a
+                href="mailto:aram18m@gmail.com"
+                className="font-medium border flex gap-2 items-center hover:bg-white
+                 hover:text-black hover:border-black px-6 py-3 bg-black text-white
+                   tracking-wider ease-in duration-200 transition-colors rounded-md"
+              >
+                Contact me
+                <ContactIcon />
+              </a>
+            </div>
           </div>
         </div>
       </Layout>

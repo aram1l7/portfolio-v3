@@ -58,6 +58,16 @@ module.exports = {
         sm: { max: "639px" },
         xs: { max: "479px" },
       },
+      keyframes: {
+        fade: {
+          "0%": { opacity: 0 },
+          "50%": { opacity: 0.5 },
+          "100%": { opacity: 1 },
+        },
+      },
+      animation: {
+        fade: "fade 1s ease-in",
+      },
     },
   },
   plugins: [],

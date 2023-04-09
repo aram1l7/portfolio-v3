@@ -19,6 +19,7 @@ const NavBar = () => {
 
   const router = useRouter();
 
+  console.log(router.asPath, "asPAth");
   return (
     <header
       className="
@@ -54,7 +55,7 @@ const NavBar = () => {
                 router.asPath === "/about" ? "w-full" : "w-0"
               }  bg-dark absolute left-0 -bottom-0.5 
               group-hover:w-full transition-[width] ease duration-300 dark:bg-light
-              w-full lg:bg-light lg:dark:bg-dark
+               lg:bg-light lg:dark:bg-dark
               `}
             ></span>
           </Link>
@@ -69,7 +70,7 @@ const NavBar = () => {
                 router.asPath === "/projects" ? "w-full" : "w-0"
               }  bg-dark absolute left-0 -bottom-0.5 
               group-hover:w-full transition-[width] ease duration-300 dark:bg-light
-              w-full lg:bg-light lg:dark:bg-dark
+               lg:bg-light lg:dark:bg-dark
               `}
             ></span>
           </Link>
@@ -98,7 +99,7 @@ const NavBar = () => {
           </Link>
           <button
             className={
-              "rounded-full p-1 border-none bg-black text-white dark:bg-white dark:text-black"
+              "rounded-full p-1 border-none "
             }
             onClick={toggle}
           >
