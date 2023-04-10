@@ -5,7 +5,7 @@ import { GithubIcon, InstaIcon, LinkedInIcon } from "./Icons";
 const Footer = () => {
   return (
     <footer className="w-full border-t-2 border-solid border-dark font-medium text-lg dark:text-light dark:border-light sm:text-base ">
-      <Layout className="py-8 flex justify-between items-center">
+      <Layout className="py-8 flex justify-between items-center xl:!p-12 md:!p-4 xs:flex-col xs:gap-3">
         <span>Copyright &copy; {new Date().getFullYear()} By Aram.</span>
         <div className="flex gap-4 items-center">
           <Link
