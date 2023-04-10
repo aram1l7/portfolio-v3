@@ -1,12 +1,6 @@
 import Link from "next/link";
 import React, { useContext, useEffect, useState } from "react";
-import {
-  GithubIcon,
-  InstaIcon,
-  LinkedInIcon,
-  MoonIcon,
-  SunIcon,
-} from "./Icons";
+import { MoonIcon, SunIcon } from "./Icons";
 import ThemeContext from "@/theme/ThemeProvider";
 import { useRouter } from "next/router";
 
@@ -75,37 +69,10 @@ const NavBar = () => {
             ></span>
           </Link>
         </nav>
-        <nav className="flex items-center justify-center flex-wrap lg:mt-2 gap-4">
-          <Link
-            className="hover:translate-y-[-4px] transition-transform duration-200 ease-in"
-            href={"https://github.com/aram1l7"}
-            target="_blank"
-          >
-            <GithubIcon />
-          </Link>
-          <Link
-            className="hover:translate-y-[-4px] transition-transform duration-200 ease-in"
-            href={"https://instagram.com/aram333____"}
-            target="_blank"
-          >
-            <InstaIcon />
-          </Link>
-          <Link
-            className="hover:translate-y-[-4px] transition-transform duration-200 ease-in"
-            href={"https://www.linkedin.com/in/aram-m19/"}
-            target="_blank"
-          >
-            <LinkedInIcon />
-          </Link>
-          <button
-            className={
-              "rounded-full p-1 border-none "
-            }
-            onClick={toggle}
-          >
-            {mounted && (theme === "light" ? <SunIcon /> : <MoonIcon />)}
-          </button>
-        </nav>
+
+        <button className={"rounded-full p-1 border-none "} onClick={toggle}>
+          {mounted && (theme === "light" ? <SunIcon /> : <MoonIcon />)}
+        </button>
       </div>
     </header>
   );
