@@ -42,7 +42,7 @@ export default function Home() {
                  hover:text-black hover:border-black px-6 py-3 bg-black text-white
                    tracking-wider ease-in duration-200 transition-colors rounded-md"
                 >
-                  Contact me
+                  Get in Touch
                   <ContactIcon />
                 </a>
               </div>

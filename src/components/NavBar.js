@@ -7,13 +7,12 @@ import { useRouter } from "next/router";
 const NavBar = () => {
   const { theme, toggle } = useContext(ThemeContext);
   const [mounted, setMounted] = useState(false);
+  
   useEffect(() => {
     setMounted(true);
   }, []);
 
   const router = useRouter();
-
-  console.log(router.asPath, "asPAth");
   return (
     <header
       className="
@@ -55,13 +54,29 @@ const NavBar = () => {
           </Link>
           <Link
             className="rounded relative group lg:text-light lg:dark:text-dark"
-            href={"/projects"}
+            href={"/work"}
           >
-            Projects
+            Work
             <span
               className={`
               inline-block h-[1px] ${
-                router.asPath === "/projects" ? "w-full" : "w-0"
+                router.asPath === "/work" ? "w-full" : "w-0"
+              }  bg-dark absolute left-0 -bottom-0.5 
+              group-hover:w-full transition-[width] ease duration-300 dark:bg-light
+               lg:bg-light lg:dark:bg-dark
+              `}
+            ></span>
+          </Link>
+
+          <Link
+            className="rounded relative group lg:text-light lg:dark:text-dark"
+            href={"/experience"}
+          >
+            Experience
+            <span
+              className={`
+              inline-block h-[1px] ${
+                router.asPath === "/experience" ? "w-full" : "w-0"
               }  bg-dark absolute left-0 -bottom-0.5 
               group-hover:w-full transition-[width] ease duration-300 dark:bg-light
                lg:bg-light lg:dark:bg-dark
