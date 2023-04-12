@@ -10,17 +10,27 @@ const About = () => {
         <h1
           className="inline-block text-dark dark:text-light
       font-bold w-full !text-6xl xl:!text-5xl 
-      lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl animate-fade sm:mb-8 mb-16"
+      text-center lg:!text-6xl md:!text-5xl sm:!text-3xl animate-fade sm:mb-8 mb-16"
         >
           About me
         </h1>
-        <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
-          <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2  md:col-span-8">
+        <div className="flex gap-16 items-center justify-center xl:flex-col">
+          <div className="relative min-w-[320px] min-h-[320px]">
+            <Image
+              src="/images/aram.png"
+              className="h-auto rleative w-full rounded-full max-w-xs max-h-80 shadow-2xl object-cover"
+              fill
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+            />
+          </div>
+          <div className="flex flex-col gap-1 max-w-md">
             <p className="font-medium ">
               Hi, my name is <strong>Aram</strong>, I am a passionate developer
               with over 3 years of dedicated expertise in the web industry.
             </p>
-            <p className="my-4 font-medium">
+            <p className="my-2 font-medium">
               Collaboration and communication are essential values in my work
               approach. I am a proactive problem solver, always seeking
               innovative solutions and striving for code quality,
@@ -35,16 +45,7 @@ const About = () => {
               create exceptional user experiences.
             </p>
           </div>
-          <div className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark  bg-light p-8 dark:border-light dark:bg-dark xl:col-span-4 md:col-span-8 md:order-1 ">
-            <div className="absolute  top-0 -right-3 -z-10 h-[103%] w-[102%]  rounded-[2rem] rounded-br-3xl  bg-dark dark:bg-light"></div>
-            <Image
-              src="/images/aram.png"
-              className="h-auto w-full rounded-2xl"
-              width={1920}
-              height={2345}
-            />
-          </div>
-          <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row  xl:items-center md:order-3">
+          <div className="flex justify-center flex-col gap-5">
             <div className="flex flex-col items-end justify-center xl:items-center">
               <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
                 <AnimatedNumbers value={500} />+
