@@ -1,14 +1,11 @@
-import { useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { useEffect, useRef } from "react";
+import { useAnimation, motion, useInView } from "framer-motion";
 
 export default function AnimatedTitle({ text, className, rest }) {
   const ctrls = useAnimation();
+  const ref = useRef(null);
 
-  const { ref, inView } = useInView({
-    threshold: 0.5,
-    triggerOnce: true,
-  });
+  const inView = useInView(ref);
 
   useEffect(() => {
     if (inView) {
