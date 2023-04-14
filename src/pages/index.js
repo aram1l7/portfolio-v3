@@ -1,3 +1,4 @@
+import AnimatedTitle from "@/components/AnimatedTitle";
 import Layout from "@/components/Layout";
 import Link from "next/link";
 
@@ -7,13 +8,12 @@ export default function Home() {
       <article className="flex min-h-screen items-center text-dark dark:text-light sm:items-start">
         <Layout className="pt-0 md:!px-4">
           <div className="flex w-full items-center justify-center flex-col max-w-5xl mx-auto text-center">
-            <h1
+            <AnimatedTitle
               className="inline-block text-dark dark:text-light
       font-bold w-full !text-6xl xl:!text-5xl 
        lg:!text-6xl md:!text-5xl sm:!text-3xl animate-fade"
-            >
-              Crafting web solutions with precision.
-            </h1>
+              text=" Crafting web solutions with precision."
+            />
 
             <p className="my-4 text-base font-medium md:text-sm sm:!text-xs max-w-xl">
               Specializing in web development for modern businesses, I deliver
