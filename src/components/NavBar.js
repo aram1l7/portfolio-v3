@@ -1,13 +1,13 @@
 import Link from "next/link";
 import React, { useContext, useEffect, useState } from "react";
-import { MoonIcon, SunIcon } from "./Icons";
+import { BulbIcon } from "./Icons";
 import ThemeContext from "@/theme/ThemeProvider";
 import { useRouter } from "next/router";
 
 const NavBar = () => {
   const { theme, toggle } = useContext(ThemeContext);
   const [mounted, setMounted] = useState(false);
-  
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -86,7 +86,11 @@ const NavBar = () => {
         </nav>
 
         <button className={"rounded-full p-1 border-none "} onClick={toggle}>
-          {mounted && (theme === "light" ? <SunIcon /> : <MoonIcon />)}
+          {mounted && (
+            <BulbIcon
+              className={`${theme === "light" ? "fill-yellow-300" : ""} `}
+            />
+          )}
         </button>
       </div>
     </header>

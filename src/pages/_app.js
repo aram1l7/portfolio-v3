@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider>
       <main
-        className={`bg-light dark:bg-dark w-full min-h-screen h-full`}
+        className={`bg-light dark:bg-dark w-full min-h-[80vh] h-full`}
       >
         <NavBar />
         <Component {...pageProps} />
