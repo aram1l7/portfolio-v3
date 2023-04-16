@@ -1,5 +1,6 @@
 import AnimatedNumbers from "@/components/AnimatedNumbers";
 import Layout from "@/components/Layout";
+import StackSlider from "@/components/StackSlider";
 import Image from "next/image";
 import React from "react";
 
@@ -9,13 +10,13 @@ const About = () => {
       <Layout className="pt-16">
         <h1
           className="inline-block text-dark dark:text-light
-      font-bold w-full !text-6xl xl:!text-5xl 
-      text-center lg:!text-6xl md:!text-5xl sm:!text-3xl animate-fade sm:mb-8 mb-16"
+      font-bold w-full !text-6xl xl:!text-5xl xl:text-center
+      lg:!text-6xl md:!text-5xl sm:!text-3xl animate-fade sm:mb-8 mb-16"
         >
           About me
         </h1>
-        <div className="flex gap-16 items-center justify-center xl:flex-col">
-          <div className="relative min-w-[320px] min-h-[320px]">
+        <div className="flex  items-center justify-between gap-12 xl:flex-col">
+          <div className="relative min-w-[320px] min-h-[320px] sm:min-h-[160px] sm:min-w-[160px]">
             <Image
               src="/images/aram.png"
               className="h-auto rleative w-full rounded-full max-w-xs max-h-80 shadow-2xl object-cover"
@@ -27,8 +28,9 @@ const About = () => {
           </div>
           <div className="flex flex-col gap-1 max-w-md">
             <p className="font-medium ">
-              Hi, my name is <strong>Aram</strong>, I am a passionate javascript developer
-              with over 3 years of dedicated expertise in the industry.
+              Hi, my name is <strong>Aram</strong>, I am a passionate javascript
+              developer with over 3 years of dedicated expertise in the
+              industry.
             </p>
             <p className="my-2 font-medium">
               Collaboration and communication are essential values in my work
@@ -74,6 +76,15 @@ const About = () => {
             </div>
           </div>
         </div>
+
+        <h1
+          className="inline-block text-right mt-32 text-dark dark:text-light
+        font-bold w-full !text-6xl xl:!text-5xl xl:text-center
+        lg:!text-6xl md:!text-5xl sm:!text-3xl animate-fade sm:mb-8 mb-16"
+        >
+          Tech stack
+        </h1>
+        <StackSlider />
       </Layout>
     </main>
   );
