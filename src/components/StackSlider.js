@@ -31,7 +31,6 @@ export default function StackSlider() {
             slidesPerView: 2,
           },
         }}
-        
         modules={[Autoplay]}
         className="mySwiper"
       >
