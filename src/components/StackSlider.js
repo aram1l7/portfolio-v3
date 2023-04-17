@@ -17,6 +17,7 @@ export default function StackSlider() {
           delay: 2500,
           disableOnInteraction: false,
         }}
+        loop
         pagination={{
           clickable: true,
         }}
