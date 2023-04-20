@@ -37,7 +37,7 @@ export default function StackSlider() {
       >
         {stack.map((el) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={el.id}>
               <div className="flex flex-col items-center justify-center gap-4 select-none">
                 <div className="w-28 h-28 lg:w-16 lg:h-16 sm:w-12 sm:h-12">
                   <img src={`/images/stack/${el.title.toLowerCase()}.svg`} />
