@@ -10,9 +10,16 @@ export default function Home() {
           <div className="flex w-full items-center justify-center flex-col max-w-5xl mx-auto text-center">
             <AnimatedTitle
               className="inline-block text-dark dark:text-light
-      font-bold w-full !text-6xl xl:!text-5xl 
-       lg:!text-6xl md:!text-5xl sm:!text-3xl animate-fade"
-              text="Crafting web solutions with precision."
+      font-bold w-full !text-5xl xl:!text-4xl 
+         md:!text-3xl sm:!text-2xl animate-fade"
+              text="Hi, my name is Aram."
+            />
+
+            <AnimatedTitle
+              className="inline-block mt-3 text-dark dark:text-light
+              font-bold w-full !text-6xl xl:!text-5xl 
+               lg:!text-6xl md:!text-5xl sm:!text-3xl animate-fade max-w-3xl"
+              text={"I build web experiences that stand out."}
             />
 
             <p className="my-4 text-base font-medium md:text-sm sm:!text-xs max-w-xl">

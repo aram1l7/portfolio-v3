@@ -28,7 +28,7 @@ const About = () => {
           </div>
           <div className="flex flex-col gap-1 max-w-md">
             <p className="font-medium ">
-              Hi, my name is <strong>Aram</strong>, I am a passionate javascript
+              I am a passionate javascript
               developer with over 3 years of dedicated expertise in the
               industry.
             </p>
