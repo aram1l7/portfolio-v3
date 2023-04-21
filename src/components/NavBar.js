@@ -109,7 +109,7 @@ const NavBar = () => {
           {themeSwitcher}
         </div>
       </header>
-      <div className="w-5 fixed left-[80px] top-[30px] z-[9999] hidden lg:flex">
+      <div className="w-5 fixed left-[80px] top-[42px] z-[9999] hidden lg:flex">
         <input
           type="checkbox"
           className="hidden box-border transition-all duration-200 ease-linear"

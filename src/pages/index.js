@@ -12,7 +12,7 @@ export default function Home() {
               className="inline-block text-dark dark:text-light
       font-bold w-full !text-6xl xl:!text-5xl 
        lg:!text-6xl md:!text-5xl sm:!text-3xl animate-fade"
-              text=" Crafting web solutions with precision."
+              text="Crafting web solutions with precision."
             />
 
             <p className="my-4 text-base font-medium md:text-sm sm:!text-xs max-w-xl">
