@@ -98,7 +98,7 @@ const NavBar = () => {
         className="
       w-full flex z-[999] items-center justify-between 
       px-32 py-8 font-medium dark:text-light
-      lg:px-16 relative z-1 md:px-12 sm:px-8"
+      lg:px-16 relative z-1 md:!px-8"
       >
         <div className="w-full flex justify-between items-center lg:hidden">
           <nav className="flex items-center justify-center gap-8">{nav}</nav>
@@ -109,7 +109,7 @@ const NavBar = () => {
           {themeSwitcher}
         </div>
       </header>
-      <div className="w-5 fixed left-[80px] top-[42px] z-[9999] hidden lg:flex">
+      <div className="w-5 fixed left-[80px] sm:!left-[34px] top-[42px] z-[9999] hidden lg:flex">
         <input
           type="checkbox"
           className="hidden box-border transition-all duration-200 ease-linear"

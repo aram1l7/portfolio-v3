@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import { projects } from "@/mocks/projects";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Work = () => {
   return (
@@ -13,14 +14,21 @@ const Work = () => {
         >
           My works
         </h1>
-        <div className="grid grid-cols-3 lg:grid-cols-2 sm:!grid-cols-1 gap-4">
-          {projects.map((el) => {
+        <div className="grid grid-cols-3 overflow-hidden lg:grid-cols-2 sm:!grid-cols-1 gap-4">
+          {projects.map((el, i) => {
             return (
-              <a
+              <motion.a
                 target="_blank"
                 href={el.link}
                 className="cursor-pointer select-none overflow-hidden group relative flex items-center justify-center"
                 key={el.id}
+                initial={{
+                  opacity: 0,
+                  translateX: i % 2 === 0 ? 120 : 360,
+                  translateY: -50,
+                }}
+                animate={{ opacity: 1, translateX: 0, translateY: 0 }}
+                transition={{ duration: 0.3, delay: i * 0.2 }}
               >
                 <div
                   style={{ background: "rgba(0, 0, 0, 0.6)" }}
@@ -40,7 +48,7 @@ const Work = () => {
                     src={el.img}
                   />
                 </div>
-              </a>
+              </motion.a>
             );
           })}
         </div>
