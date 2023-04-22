@@ -1,10 +1,18 @@
 import AnimatedTitle from "@/components/AnimatedTitle";
 import Layout from "@/components/Layout";
+import Head from "next/head";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>Aram M. | Web Developer</title>
+        <meta
+          name="description"
+          content="I am Aram Martirosyan, a full stack software engineer with expertise in building web applications with React.js/Node.js. I am open to freelance and remote opportunities. Contact me today."
+        />
+      </Head>
       <article className="flex min-h-screen items-center text-dark dark:text-light sm:items-start">
         <Layout className="pt-0 md:!px-4">
           <div className="flex w-full items-center justify-center flex-col max-w-5xl mx-auto text-center">
