@@ -42,7 +42,13 @@ export default function AnimatedTitle({ text, className, rest }) {
         return (
           <motion.span
             ref={ref}
-            className="inline-block whitespace-nowrap mr-[0.25em]"
+            className={`${
+              word === "Aram." ? "text-primary dark:text-primaryDark" : ""
+            } inline-block ${
+              word === "stand" || word === "out."
+                ? "text-primaryDark dark:text-primary"
+                : ""
+            } whitespace-nowrap mr-[0.25em]`}
             aria-hidden="true"
             key={index}
             initial="hidden"

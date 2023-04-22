@@ -28,7 +28,7 @@ const Work = () => {
                   translateY: -50,
                 }}
                 animate={{ opacity: 1, translateX: 0, translateY: 0 }}
-                transition={{ duration: 0.3, delay: i * 0.2 }}
+                transition={{ duration: 0.5, delay: i * 0.2 }}
               >
                 <div
                   style={{ background: "rgba(0, 0, 0, 0.6)" }}

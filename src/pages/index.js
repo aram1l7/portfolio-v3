@@ -30,16 +30,13 @@ export default function Home() {
             <div className="mt-2 flex items-center self-center">
               <Link
                 href="/about"
-                className="font-medium cursor-pointer border group 
-                dark:hover:border-white dark:bg-white dark:text-black 
-                  flex gap-2 items-center hover:bg-white dark:hover:bg-black dark:hover:text-white
-                 hover:text-black hover:border-black px-6 py-3 bg-black text-white
-                   tracking-wider ease-in duration-200 transition-colors rounded-md"
+                className="button border-none ease-in duration-200 transition-colors font-medium 
+                cursor-pointer px-6 py-3 border rounded-md text-white group 
+                shadow-xl bg-primary shadow-pink-300 dark:bg-primaryDark dark:shadow-teal-300
+                active:shadow-lg active:translate-x-0.5 active:translate-y-0.5
+                "
               >
                 Explore more
-                <div className="w-4 h-4 dark:invert-0 dark:group-hover:invert invert group-hover:invert-0">
-                  <img src="/images/arrow.svg" alt="arrow" />
-                </div>
               </Link>
             </div>
           </div>

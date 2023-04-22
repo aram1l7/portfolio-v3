@@ -101,7 +101,9 @@ const NavBar = () => {
       lg:px-16 relative z-1 md:!px-8"
       >
         <div className="w-full flex justify-between items-center lg:hidden">
-          <nav className="flex items-center justify-center gap-8">{nav}</nav>
+          <nav className="flex items-center justify-center gap-8 select-none">
+            {nav}
+          </nav>
 
           {themeSwitcher}
         </div>
