@@ -7,12 +7,34 @@ import { useRouter } from "next/router";
 const NavBar = () => {
   const { theme, toggle } = useContext(ThemeContext);
   const [mounted, setMounted] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  function closeOnClickOutside(e) {
+    console.log(e.target, "targets");
+    console.log(isOpen, "isOpen");
+    let open = document
+      .getElementById("sidebarMenu")
+      .classList.contains("translate-x-0");
+    if (
+      e.target.id !== "sidebar-btn" &&
+      e.target.parentNode.id !== "sidebar-btn" &&
+      open &&
+      !e.target.classList.contains("sidebarIconToggle") &&
+      !e.target.parentNode.classList.contains("sidebarIconToggle")
+    ) {
+      console.log("aaaaa");
+      document.querySelector(".sidebarIconToggle").click();
+    }
+  }
 
   useEffect(() => {
     setMounted(true);
-  }, []);
 
-  const [isOpen, setIsOpen] = useState(false);
+    window.addEventListener("click", closeOnClickOutside, true);
+    return () => {
+      window.removeEventListener("click", closeOnClickOutside, true);
+    };
+  }, []);
 
   const router = useRouter();
 
@@ -111,7 +133,10 @@ const NavBar = () => {
           {themeSwitcher}
         </div>
       </header>
-      <div className="w-5 fixed left-[80px] sm:!left-[34px] top-[42px] z-[9999] hidden lg:flex">
+      <div
+        id="sidebar-btn"
+        className="w-5 fixed left-[80px] sm:!left-[34px] top-[42px] z-[9999] hidden lg:flex"
+      >
         <input
           type="checkbox"
           className="hidden box-border transition-all duration-200 ease-linear"
