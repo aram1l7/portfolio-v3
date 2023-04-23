@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import React from "react";
 import { jobHistory } from "@/mocks/job-history";
-import RoundedIcon from "@/components/RoundedIcon";
+import { RoundedIcon } from "@/components/Icons";
 import Head from "next/head";
 
 const Details = ({ position, company, time, type, description, location }) => {

@@ -17,7 +17,7 @@ export const jobHistory = [
     type: "Full time",
     location: "Yerevan, Armenia",
     description:
-      "Worked on a social media app with a great team of designers and developers as a frontend developer, improved the apps dashboard and building new ux features for 6 months.Later developed a blockchain landing page with blog posts from scratch with React/Node",
+      "Worked on a social media app with a great team of designers and developers as a frontend developer, improved the apps dashboard and building new ux features for 6 months.Later developed a blockchain landing page with blog posts from scratch with React/Node.",
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ export const jobHistory = [
     time: "06/2022 - 10/2022",
     type: "Contract",
     location: "Yerevan, Armenia",
-    description: `Designed and developed companys landing page which later won an award, implemented full stack mailing feature for users to apply for jobs with a file attachment option`,
+    description: `Designed and developed companys landing page which later won an award, implemented full stack mailing feature for users to apply for jobs with a file attachment option.`,
   },
   {
     id: 1,
@@ -35,6 +35,6 @@ export const jobHistory = [
     time: "01/2021 - 07/2021",
     location: "Yerevan, Armenia",
     type: "Full time",
-    description: `Developed company's biggest product's landing page, and implemented various UX features for the products dashboard`,
+    description: `Developed company's biggest product's landing page, and implemented various UX features for the products dashboard.`,
   },
 ];
