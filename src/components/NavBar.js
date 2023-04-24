@@ -42,7 +42,7 @@ const NavBar = () => {
     <button className={"rounded-full p-1 border-none "} onClick={toggle}>
       {mounted && (
         <BulbIcon
-          className={`${theme === "light" ? "fill-yellow-300" : ""} `}
+          className={`${theme === "light" ? "fill-yellow-300" : "fill-black"} `}
         />
       )}
     </button>
