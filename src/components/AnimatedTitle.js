@@ -37,7 +37,7 @@ export default function AnimatedTitle({ text, className, rest }) {
   };
 
   return (
-    <h2 aria-label={text} className={`${className}`}>
+    <h1 aria-label={text} className={`${className}`}>
       {text.split(" ").map((word, index) => {
         return (
           <motion.span
@@ -74,6 +74,6 @@ export default function AnimatedTitle({ text, className, rest }) {
           </motion.span>
         );
       })}
-    </h2>
+    </h1>
   );
 }
