@@ -145,9 +145,9 @@ const NavBar = () => {
         />
 
         <label htmlFor="openSidebarMenu" className="sidebarIconToggle">
-          <div className="spinner diagonal part-1 bg-black dark:bg-white"></div>
-          <div className="spinner horizontal bg-black dark:bg-white"></div>
-          <div className="spinner diagonal part-2 bg-black dark:bg-white"></div>
+          <span className="spinner diagonal part-1 bg-black dark:bg-white"></span>
+          <span className="spinner horizontal bg-black dark:bg-white"></span>
+          <span className="spinner diagonal part-2 bg-black dark:bg-white"></span>
         </label>
       </div>
       <div
