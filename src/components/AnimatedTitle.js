@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useAnimation, motion, useInView } from "framer-motion";
 
-export default function AnimatedTitle({ text, className, rest }) {
+export default function AnimatedTitle({ text, className, rest, variant }) {
   const ctrls = useAnimation();
   const ref = useRef(null);
 
@@ -36,8 +36,10 @@ export default function AnimatedTitle({ text, className, rest }) {
     },
   };
 
+  const Tag = variant || "h1";
+
   return (
-    <h1 aria-label={text} className={`${className}`}>
+    <Tag aria-label={text} className={`${className}`}>
       {text.split(" ").map((word, index) => {
         return (
           <motion.span
@@ -74,6 +76,6 @@ export default function AnimatedTitle({ text, className, rest }) {
           </motion.span>
         );
       })}
-    </h1>
+    </Tag>
   );
 }

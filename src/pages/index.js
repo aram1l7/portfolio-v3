@@ -13,10 +13,11 @@ export default function Home() {
           content="I am Aram Martirosyan, a full stack software engineer with expertise in building web applications with React.js/Node.js. I am open to freelance and remote opportunities. Contact me today."
         />
       </Head>
-      <article className="flex min-h-screen items-center text-dark dark:text-light sm:items-start">
+      <section className="flex min-h-screen items-center text-dark dark:text-light sm:items-start">
         <Layout className="pt-0 md:!px-4">
           <div className="flex w-full items-center justify-center flex-col max-w-5xl mx-auto text-center">
             <AnimatedTitle
+              variant={"h1"}
               className="inline-block text-dark dark:text-light
       font-bold w-full !text-5xl xl:!text-4xl 
          md:!text-3xl sm:!text-2xl animate-fade"
@@ -24,6 +25,7 @@ export default function Home() {
             />
 
             <AnimatedTitle
+              variant={"h2"}
               className="inline-block mt-3 text-dark dark:text-light
               font-bold w-full !text-6xl xl:!text-5xl 
                lg:!text-6xl md:!text-5xl sm:!text-3xl animate-fade max-w-3xl"
@@ -49,7 +51,7 @@ export default function Home() {
             </div>
           </div>
         </Layout>
-      </article>
+      </section>
     </>
   );
 }

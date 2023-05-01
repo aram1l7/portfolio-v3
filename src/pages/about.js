@@ -87,36 +87,45 @@ const About = () => {
             </div>
           </div>
 
-          <h1
-            className="inline-block text-right mt-32 text-dark dark:text-light
+          <section>
+            <h1
+              className="inline-block text-right mt-32 text-dark dark:text-light
         font-bold w-full !text-6xl xl:!text-5xl xl:text-center
         lg:!text-6xl md:!text-5xl sm:!text-3xl animate-fade sm:mb-8 mb-16"
-          >
-            Tech stack
-          </h1>
-          <StackSlider />
-          <h1
-            className="inline-block mt-32 text-dark dark:text-light
+            >
+              Tech stack
+            </h1>
+            <StackSlider />
+          </section>
+          <section>
+            <h1
+              className="inline-block mt-32 text-dark dark:text-light
         font-bold w-full !text-6xl xl:!text-5xl xl:text-center
         lg:!text-6xl md:!text-5xl sm:!text-3xl animate-fade sm:mb-8 mb-16"
-          >
-            Services I do
-          </h1>
-          <div className="grid mt-12 grid-cols-3 lg:grid-cols-2 sm:!grid-cols-1 gap-x-8 gap-y-12">
-            {services.map((el) => {
-              return (
-                <div
-                  className="flex duration-300 ease-in transition-transform hover:scale-110 flex-col justify-center items-center gap-6"
-                  key={el.id}
-                >
-                  <div className="w-28">
-                    <img className="dark:invert" src={el.img} />
+            >
+              Services I do
+            </h1>
+            <div className="grid mt-12 grid-cols-3 lg:grid-cols-2 sm:!grid-cols-1 gap-x-8 gap-y-12">
+              {services.map((el) => {
+                return (
+                  <div
+                    className="flex duration-300 ease-in transition-transform hover:scale-110 flex-col justify-center items-center gap-6"
+                    key={el.id}
+                  >
+                    <div className="w-28">
+                      <Image
+                        width={112}
+                        height={112}
+                        className="dark:invert"
+                        src={el.img}
+                      />
+                    </div>
+                    <span className="font-semibold">{el.title}</span>
                   </div>
-                  <span className="font-semibold">{el.title}</span>
-                </div>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
+          </section>
         </Layout>
       </main>
     </>
