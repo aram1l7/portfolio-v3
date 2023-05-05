@@ -3,6 +3,7 @@ import { projects } from "@/mocks/projects";
 import React from "react";
 import { motion } from "framer-motion";
 import Head from "next/head";
+import Image from "next/image";
 
 const Work = () => {
   return (
@@ -52,7 +53,9 @@ const Work = () => {
                     </div>
                   </div>
                   <div className="w-full lg:h-full h-72">
-                    <img
+                    <Image
+                      width={300}
+                      height={300}
                       className="w-full h-full object-cover group-hover:scale-110 duration-500 ease-in-out"
                       src={el.img}
                       alt={el.alt}
