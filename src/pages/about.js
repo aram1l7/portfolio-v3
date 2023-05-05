@@ -10,7 +10,7 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>Aram M. | About</title>
+        <title>Aram Martirosyan | About</title>
         <meta
           name="description"
           content="Get to know Aram Martirosyan, a skilled full stack JavaScript engineer with a passion for building web applications. Learn about my experience, skills, and approach to software development."

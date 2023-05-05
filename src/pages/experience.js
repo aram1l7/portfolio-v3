@@ -32,7 +32,7 @@ const Experience = () => {
           name="description"
           content="Learn about Aram Martirosyan's extensive experience as a full stack JavaScript engineer. From developing custom web applications to optimizing website performance, see how I have helped clients achieve their goals with my technical skills and problem-solving abilities."
         />
-        <title>Aram M. | My journey</title>
+        <title>Aram Martirosyan | My journey</title>
       </Head>
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">

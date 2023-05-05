@@ -12,7 +12,7 @@ const Work = () => {
           name="description"
           content="Discover Aram Martirosyan's portfolio of web development projects. From front-end designs to back-end functionality, see how I bring innovative ideas to life with my expertise in React, Node.js, Express.js, and more."
         />
-        <title>Aram M. | Works</title>
+        <title>Aram Martirosyan | Works</title>
       </Head>
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
