@@ -47,7 +47,7 @@ export default function AnimatedTitle({ text, className, rest, variant }) {
             className={`${
               word === "Aram." ? "text-primary dark:text-primaryDark" : ""
             } inline-block ${
-              word === "stand" || word === "out."
+              word === "businesses."
                 ? "text-primaryDark dark:text-primary"
                 : ""
             } whitespace-nowrap mr-[0.25em]`}

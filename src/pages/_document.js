@@ -10,7 +10,7 @@ export default function Document() {
         <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
-          content="JavaScript engineer for hire, React developer for hire, freelance software engineer"
+          content="Website design and development, web development services, landing page design"
         />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-XN7JN9JNGE"

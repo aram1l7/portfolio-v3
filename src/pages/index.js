@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Aram Martirosyan | Web Developer</title>
+        <title>Freelance Web Developer</title>
         <meta
           name="description"
           content="I am Aram Martirosyan, a full stack software engineer with expertise in building web applications with React.js/Node.js. I am open to freelance and remote opportunities. Contact me today."
@@ -17,7 +17,7 @@ export default function Home() {
         <Layout className="pt-0 md:!px-4">
           <div className="flex w-full items-center justify-center flex-col max-w-5xl mx-auto text-center">
             <AnimatedTitle
-              variant={"h1"}
+              variant={"h2"}
               className="inline-block text-dark dark:text-light
       font-bold w-full !text-5xl xl:!text-4xl 
          md:!text-3xl sm:!text-2xl animate-fade"
@@ -25,17 +25,18 @@ export default function Home() {
             />
 
             <AnimatedTitle
-              variant={"h2"}
+              variant={"h1"}
               className="inline-block mt-3 text-dark dark:text-light
               font-bold w-full !text-6xl xl:!text-5xl 
                lg:!text-6xl md:!text-5xl sm:!text-3xl animate-fade max-w-3xl"
-              text={"I build web experiences that stand out."}
+              text={"I build modern websites for businesses."}
             />
 
             <p className="my-4 text-base font-medium md:text-sm sm:!text-xs max-w-xl">
-              Specializing in web development for modern businesses, I deliver
-              custom solutions that leverage the latest technologies and best
-              practices to achieve measurable results and business growth.
+              Specializing in web design and development, I provide innovative
+              web solutions for startups and established businesses alike with
+              the latest technologies and best practices to achieve measurable
+              results.
             </p>
             <div className="mt-2 flex items-center self-center">
               <Link
