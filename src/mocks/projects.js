@@ -36,9 +36,16 @@ export const projects = [
   },
   {
     id: 6,
-    title: "Mailer app",
+    title: "Mailer",
     link: "https://mui-next-form.vercel.app/",
     img: "/images/works/contact-form.png",
     alt: "Full stack Material UI contact form to send mails with attachments",
+  },
+  {
+    id: 7,
+    title: "S&R Jobs",
+    link: "https://salesretailjobs.com",
+    img: "/images/works/salesretailjobs.png",
+    alt: "Job board for sales and retail specialists made with React/Next/Node.js",
   },
 ];

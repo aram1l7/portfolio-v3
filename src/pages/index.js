@@ -2,8 +2,22 @@ import AnimatedTitle from "@/components/AnimatedTitle";
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
+  const [hideLastText, setHideLastText] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      let lastText = document.querySelector(".last-text");
+      let secondaryText = document.querySelector(".secondary-heading")
+      if (lastText) {
+        lastText.classList.add("invisible", "h-0");
+        secondaryText.classList.add("h-12")
+      }
+      setHideLastText(true);
+    }, 2050);
+  }, []);
   return (
     <>
       <Head>
@@ -26,12 +40,32 @@ export default function Home() {
 
             <AnimatedTitle
               variant={"h1"}
-              className="inline-block mt-3 text-dark dark:text-light
+              className="inline-block secondary-heading mt-3 text-dark dark:text-light
               font-bold w-full !text-6xl xl:!text-5xl 
                lg:!text-6xl md:!text-5xl sm:!text-3xl animate-fade max-w-3xl"
               text={"I build modern websites for businesses."}
             />
-
+            {hideLastText && (
+              <TypeAnimation
+                className={`text-primaryDark dark:text-primary inline-block mt-3 
+          font-bold w-full !text-6xl xl:!text-5xl 
+           lg:!text-6xl md:!text-5xl sm:!text-3xl max-w-3xl`}
+                sequence={[
+                  "businesses.",
+                  1000,
+                  "startups.",
+                  2000,
+                  "enterprises.",
+                  2000,
+                ]}
+                preRenderFirstString
+                speed={200}
+                wrapper="span"
+                cursor={true}
+                repeat={Infinity}
+                style={{ display: "inline-block" }}
+              />
+            )}
             <p className="my-4 text-base font-medium md:text-sm sm:!text-xs max-w-xl">
               Specializing in web design and development, I provide innovative
               web solutions for startups and established businesses alike with

@@ -2,11 +2,12 @@ import AnimatedNumbers from "@/components/AnimatedNumbers";
 import Layout from "@/components/Layout";
 import StackSlider from "@/components/StackSlider";
 import { services } from "@/mocks/services";
+import axios from "axios";
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 
-const About = () => {
+const About = ({ totalContributions }) => {
   return (
     <>
       <Head>
@@ -60,7 +61,7 @@ const About = () => {
             <div className="flex justify-center flex-col gap-5">
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumbers value={500} />+
+                  <AnimatedNumbers value={totalContributions} />+
                 </span>
                 <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75  xl:text-center md:text-lg sm:text-base xs:text-sm">
                   github contributions
@@ -133,3 +134,45 @@ const About = () => {
 };
 
 export default About;
+
+export const getServerSideProps = async () => {
+  const { data } = await axios({
+    url: `https://api.github.com/graphql`,
+    method: "post",
+    headers: {
+      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+    },
+    data: {
+      query: `
+      query($userName:String!) { 
+        user(login: $userName){
+          contributionsCollection {
+            contributionCalendar {
+              totalContributions
+              weeks {
+                contributionDays {
+                  contributionCount
+                  date
+                }
+              }
+            }
+          }
+        }
+      }
+   `,
+      variables: {
+        userName: "aram1l7",
+      },
+    },
+  });
+  let {
+    contributionsCollection: { contributionCalendar },
+  } = data.data.user;
+  console.log(contributionCalendar, "data");
+
+  return {
+    props: {
+      totalContributions: contributionCalendar.totalContributions,
+    },
+  };
+};

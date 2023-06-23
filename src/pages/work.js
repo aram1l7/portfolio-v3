@@ -59,6 +59,7 @@ const Work = () => {
                       className="w-full h-full object-cover group-hover:scale-110 duration-500 ease-in-out"
                       src={el.img}
                       alt={el.alt}
+                      unoptimized
                     />
                   </div>
                 </motion.a>
