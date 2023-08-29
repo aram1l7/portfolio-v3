@@ -43,7 +43,7 @@ export default function Home() {
               className="inline-block secondary-heading mt-3 text-dark dark:text-light
               font-bold w-full !text-6xl xl:!text-5xl 
                lg:!text-6xl md:!text-5xl sm:!text-3xl animate-fade max-w-3xl"
-              text={"I build modern web apps for businesses."}
+              text={"I build modern websites for businesses."}
             />
             {hideLastText && (
               <TypeAnimation
