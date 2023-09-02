@@ -21,7 +21,7 @@ const AnimatedNumbers = ({ value }) => {
     });
   }, [springVal, value]);
 
-  return <span ref={ref}></span>;
+  return <span ref={ref}></span>
 };
 
 export default AnimatedNumbers;
