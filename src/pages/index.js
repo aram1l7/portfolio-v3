@@ -41,15 +41,15 @@ export default function Home() {
             <AnimatedTitle
               variant={"h1"}
               className="inline-block secondary-heading mt-3 text-dark dark:text-light
-              font-bold w-full !text-6xl xl:!text-5xl 
-               lg:!text-6xl md:!text-5xl sm:!text-3xl animate-fade max-w-3xl"
-              text={"I build modern websites for businesses."}
+              font-bold w-full text-5xl 
+                sm:!text-3xl animate-fade max-w-3xl"
+              text={"I build modern web apps for businesses."}
             />
             {hideLastText && (
               <TypeAnimation
                 className={`text-primaryDark dark:text-primary inline-block mt-3 
-          font-bold w-full !text-6xl xl:!text-5xl 
-           lg:!text-6xl md:!text-5xl sm:!text-3xl max-w-3xl`}
+          font-bold w-full text-5xl 
+           sm:!text-3xl max-w-3xl`}
                 sequence={[
                   "businesses.",
                   1000,

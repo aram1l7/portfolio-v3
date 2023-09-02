@@ -10,6 +10,15 @@ export const jobHistory = [
       "Working on a big data analytics app as a full stack React/Node developer, implementing user authentication with JWT, building new frontend and backend features such as CRUD,spam management, mailing, reset password, etc.",
   },
   {
+    id: 5,
+    position: "Javascript Developer",
+    company: "Upwork",
+    time: "11/2022 - 06/2023",
+    type:"Contract",
+    location: "Remote",
+    description: `Developing and maintaining a voIp phone dashboard from scratch on my own, creating user friendly, cross browser adaptive landing page for a client which generated over 10k in 1 month.`,
+  },
+  {
     id: 3,
     position: "React Developer",
     company: "Cretrix",

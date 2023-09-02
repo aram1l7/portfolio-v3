@@ -40,7 +40,7 @@ const About = ({ totalContributions }) => {
             </div>
             <div className="flex flex-col gap-1 max-w-md">
               <p className="font-medium ">
-                I am a passionate javascript developer with over 2.5 years of
+                I am a passionate javascript developer with over 3 years of
                 dedicated expertise in the industry.
               </p>
               <p className="my-2 font-medium">
@@ -64,13 +64,13 @@ const About = ({ totalContributions }) => {
                   <AnimatedNumbers value={totalContributions} />+
                 </span>
                 <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75  xl:text-center md:text-lg sm:text-base xs:text-sm">
-                  github contributions
+                  github contributions in {new Date().getFullYear()}
                 </h2>
               </div>
 
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumbers value={2} />+
+                  <AnimatedNumbers value={3} />+
                 </span>
                 <h2 className="mb-4 text-xl font-medium capitalize text-dark/75 dark:text-light/75  xl:text-center md:text-lg sm:text-base xs:text-sm">
                   years of experience
