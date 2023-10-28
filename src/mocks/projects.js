@@ -48,4 +48,18 @@ export const projects = [
     img: "/images/works/salesretailjobs.png",
     alt: "Job board for sales and retail specialists made with React/Next/Node.js",
   },
+  {
+    id: 7,
+    title: "Hello movies",
+    link: "https://hellomovies.vercel.app",
+    img: "/images/works/hellomovies.png",
+    alt: "Full stack movie app with React.js and Node/Prisma",
+  },
+  {
+    id: 8,
+    title: `Aram's blog`,
+    link: "https://arams-blog.vercel.app",
+    img: "/images/works/blog.png",
+    alt: "Full stack blog app with React.js and Contentful cms",
+  },
 ];

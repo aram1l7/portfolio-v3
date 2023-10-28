@@ -7,13 +7,40 @@ const Footer = () => {
         <span className="select-none flex items-center">
           &copy; {new Date().getFullYear()} by
           &#x1D49C;&#x1D4C7;&#x1D4B6;&#x1D4C2;
-          <span className="text-primary animate-pulse ml-2 text-2xl">
-            &#x2665;
-          </span>
         </span>
-        <span>
-          <a href="mailto:aram18m@gmail.com">aram18m@gmail.com</a>
-        </span>
+        <div className="flex gap-3 items-center">
+          <a
+            target="_blank"
+            className="w-6 h-6 group"
+            href="mailto:aram18m@gmail.com?subject=Software Engineer"
+          >
+            <img
+              className="group-hover:translate-y-[-5px] duration-200 ease-out transition-transform"
+              src="/images/social/gmail.svg"
+            />
+          </a>
+          <a
+            target="_blank"
+            className="w-6 h-6 group"
+            href="https://www.linkedin.com/in/aram-m19/"
+          >
+            <img
+              className="group-hover:translate-y-[-5px] duration-200 ease-out transition-transform"
+              src="/images/social/linkedin.svg"
+            />
+          </a>
+
+          <a
+            target="_blank"
+            className="w-6 h-6 group"
+            href="https://github.com/aram1l7"
+          >
+            <img
+              className="dark:invert group-hover:translate-y-[-5px] duration-200 ease-out transition-transform"
+              src="/images/social/github.svg"
+            />
+          </a>
+        </div>
       </Layout>
     </footer>
   );
