@@ -1,9 +1,18 @@
 export const jobHistory = [
   {
+    id: 6,
+    position: "Frontend Developer",
+    company: "Grailpay",
+    time: "12/2023 - Present",
+    type: "Contract",
+    location: "Remote",
+    description: "Working on a fintech b2b product using Remix.js",
+  },
+  {
     id: 4,
     position: "Full Stack Developer",
     company: "Itsoft",
-    time: "11/2022 - Present",
+    time: "11/2022 - 12/2023",
     type: "Contract",
     location: "Remote",
     description:
@@ -14,7 +23,7 @@ export const jobHistory = [
     position: "Javascript Developer",
     company: "Upwork",
     time: "11/2022 - 06/2023",
-    type:"Contract",
+    type: "Contract",
     location: "Remote",
     description: `Developing and maintaining a voIp phone dashboard from scratch on my own, creating user friendly, cross browser adaptive landing page for a client which generated over 10k in 1 month.`,
   },

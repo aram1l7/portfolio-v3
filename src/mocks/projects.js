@@ -36,13 +36,6 @@ export const projects = [
   },
   {
     id: 6,
-    title: "Mailer",
-    link: "https://mui-next-form.vercel.app/",
-    img: "/images/works/contact-form.png",
-    alt: "Full stack Material UI contact form to send mails with attachments",
-  },
-  {
-    id: 7,
     title: "S&R Jobs",
     link: "https://salesretailjobs.com",
     img: "/images/works/salesretailjobs.png",
@@ -57,9 +50,20 @@ export const projects = [
   },
   {
     id: 8,
-    title: `Aram's blog`,
-    link: "https://arams-blog.vercel.app",
-    img: "/images/works/blog.png",
-    alt: "Full stack blog app with React.js and Contentful cms",
+    title: "ApricusIT",
+    link: "https://composable.apricusit.com",
+    img: "/images/works/apricusit.png",
+  },
+  {
+    id: 9,
+    title: "Poolman",
+    link: "https://pool-man.com.ua",
+    img: "/images/works/poolman.png",
+  },
+  {
+    id: 10,
+    title: "Hegnan",
+    link: "https://hegnan.vercel.app",
+    img: "/images/works/hegnan.png",
   },
 ];
