@@ -7,13 +7,6 @@ export const projects = [
     alt: "Cross browser and responsive landing page for Blowsys LLC",
   },
   {
-    id: 2,
-    title: "SustainDAO",
-    link: "https://sustaindao.xyz/",
-    img: "/images/works/sustaindao.png",
-    alt: "Responsive cryptocurrency landing page with blog and articles",
-  },
-  {
     id: 3,
     title: "Artist Portfolio",
     link: "https://artist-portfolio-web.vercel.app/",
@@ -63,7 +56,7 @@ export const projects = [
   {
     id: 10,
     title: "Hegnan",
-    link: "https://hegnan.vercel.app",
+    link: "https://hegnan.com",
     img: "/images/works/hegnan.png",
   },
 ];

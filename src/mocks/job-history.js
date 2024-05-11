@@ -6,7 +6,10 @@ export const jobHistory = [
     time: "12/2023 - Present",
     type: "Contract",
     location: "Remote",
-    description: "Working on a fintech b2b product using Remix.js",
+    description: `Implemented a state-of-the-art B2B payment processor widget with Remix.js, driving a 20% increase in user
+    satisfaction and seamless integration with key trading components. <br/>
+    Led the implementation of end to end testing with jest and cypress, ensuring 95% test coverage, resulting in
+    improved code quality and a more robust trading interface.`,
   },
   {
     id: 4,

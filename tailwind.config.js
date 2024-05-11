@@ -59,6 +59,7 @@ module.exports = {
         md: { max: "767px" },
         sm: { max: "639px" },
         xs: { max: "479px" },
+        xxs: { max: "400px" },
       },
       keyframes: {
         fade: {

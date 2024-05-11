@@ -7,13 +7,17 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
   const [hideLastText, setHideLastText] = useState(false);
+  
   useEffect(() => {
     setTimeout(() => {
       let lastText = document.querySelector(".last-text");
-      let secondaryText = document.querySelector(".secondary-heading")
+      let secondaryText = document.querySelector(".secondary-heading");
       if (lastText) {
         lastText.classList.add("invisible", "h-0");
-        secondaryText.classList.add("h-12")
+        if (window.screen.width < 420) {
+          lastText.classList.add("w-0");
+        }
+        secondaryText.classList.add("h-12");
       }
       setHideLastText(true);
     }, 2050);
@@ -21,7 +25,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Freelance Web Developer</title>
+        <title>Aram Martirosyan</title>
         <meta
           name="description"
           content="I am Aram Martirosyan, a full stack software engineer with expertise in building web applications with React.js/Node.js. I am open to freelance and remote opportunities. Contact me today."
@@ -47,7 +51,7 @@ export default function Home() {
             />
             {hideLastText && (
               <TypeAnimation
-                className={`text-primaryDark dark:text-primary inline-block mt-3 
+                className={`text-primaryDark dark:text-primary inline-block xxs:!mt-6 sm:!mt-0 lg:mt-3 
           font-bold w-full text-5xl 
            sm:!text-3xl max-w-3xl`}
                 sequence={[

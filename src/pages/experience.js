@@ -18,7 +18,10 @@ const Details = ({ position, company, time, type, description, location }) => {
         <span className="capitalize text-dark/75 font-medium dark:text-light/50 xs:text-sm">
           {time} | {location} | {type}
         </span>
-        <p className="font-medium w-full md:text-sm">{description}</p>
+        <p
+          className="font-medium w-full md:text-sm"
+          dangerouslySetInnerHTML={{ __html: description }}
+        ></p>
       </div>
     </li>
   );
