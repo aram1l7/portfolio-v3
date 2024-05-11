@@ -42,7 +42,8 @@ const About = ({ totalContributions }) => {
             </div>
             <div className="flex flex-col gap-1 max-w-md">
               <p className="font-medium ">
-                I am a passionate javascript developer with over 3 years of
+                I am a passionate javascript developer with over{" "}
+                {new Date().getFullYear() - CAREER_START_YEAR} years of
                 dedicated expertise in the industry.
               </p>
               <p className="my-2 font-medium">
