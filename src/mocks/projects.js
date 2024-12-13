@@ -28,13 +28,6 @@ export const projects = [
     alt: "Cross browser and responsive landing page for Cretrix LLC",
   },
   {
-    id: 6,
-    title: "S&R Jobs",
-    link: "https://salesretailjobs.com",
-    img: "/images/works/salesretailjobs.png",
-    alt: "Job board for sales and retail specialists made with React/Next/Node.js",
-  },
-  {
     id: 7,
     title: "Hello movies",
     link: "https://hellomovies.vercel.app",
@@ -58,5 +51,11 @@ export const projects = [
     title: "Hegnan",
     link: "https://hegnan.com",
     img: "/images/works/hegnan.png",
+  },
+  {
+    id: 11,
+    title: "SustainDAO",
+    link: "https://sustaindao-xyz.vercel.app/",
+    img: "/images/works/sustaindao.png",
   },
 ];

@@ -3,6 +3,7 @@ import React from "react";
 import { jobHistory } from "@/mocks/job-history";
 import { RoundedIcon } from "@/components/Icons";
 import Head from "next/head";
+import dynamic from "next/dynamic";
 
 const Details = ({ position, company, time, type, description, location }) => {
   return (
@@ -60,4 +61,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default dynamic(() => Promise.resolve(Experience), { ssr: false });
