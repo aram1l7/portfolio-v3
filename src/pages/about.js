@@ -29,10 +29,10 @@ const About = ({ totalContributions }) => {
             About me
           </h1>
           <div className="flex  items-center justify-between gap-12 xl:flex-col">
-            <div className="relative min-w-[320px] min-h-[320px] sm:min-h-[160px] sm:min-w-[160px]">
+            <div className="relative overflow-hidden rounded-full min-w-[320px] min-h-[320px] sm:min-h-[160px] sm:min-w-[160px]">
               <Image
-                src="/images/aram.png"
-                className="h-auto rleative w-full rounded-full max-w-xs max-h-80 shadow-2xl object-cover"
+                src="/images/aram.jpg"
+                className="h-auto scale-150 relative w-full object-top max-w-xs max-h-80 shadow-2xl object-cover"
                 fill
                 alt="Aram Martirosyan, web developer, freelancer, software engineer"
                 sizes="(max-width: 768px) 100vw,
@@ -53,7 +53,7 @@ const About = ({ totalContributions }) => {
                 maintainability, and performance optimization.
               </p>
               <p className="font-medium">
-                With my strong foundation in React and Node, along with my keen
+                With my strong foundation in React, Next.js and Node.js, along with my keen
                 eye for detail and dedication to delivering high-quality code, I
                 am confident in my ability to contribute to the success of any
                 software development project. I am excited to continue pushing
@@ -174,11 +174,10 @@ export const getServerSideProps = async () => {
   let {
     contributionsCollection: { contributionCalendar },
   } = data.data.user;
-  console.log(contributionCalendar, "data");
-
+ 
   return {
     props: {
-      totalContributions: contributionCalendar.totalContributions,
+      totalContributions: 456,
     },
   };
 };

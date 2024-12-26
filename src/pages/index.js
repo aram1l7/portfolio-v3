@@ -7,7 +7,7 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
   const [hideLastText, setHideLastText] = useState(false);
-  
+
   useEffect(() => {
     setTimeout(() => {
       let lastText = document.querySelector(".last-text");
@@ -71,10 +71,10 @@ export default function Home() {
               />
             )}
             <p className="my-4 text-base font-medium md:text-sm sm:!text-xs max-w-xl">
-              Specializing in web design and development, I provide innovative
-              web solutions for startups and established businesses alike with
-              the latest technologies and best practices to achieve measurable
-              results.
+              With expertise in React, Next.js, and modern web development
+              practices, I build fast, secure, and scalable web applications
+              that help businesses enhance their user experience and scale
+              effectively.
             </p>
             <div className="mt-2 flex items-center self-center">
               <Link
