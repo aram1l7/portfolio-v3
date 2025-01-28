@@ -8,13 +8,14 @@ import Footer from "@/components/Footer";
 export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider>
-      <main
+      {/* <main
         className={`bg-light dark:bg-dark w-full min-h-[80vh] h-full`}
       >
         <NavBar />
         <Component {...pageProps} />
         <Footer />
-      </main>
+      </main> */}
+      <h1>temporary unavailable</h1>
     </ThemeProvider>
   );
 }
