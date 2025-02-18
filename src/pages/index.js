@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-export default function Home() {
+export default function Home({ initialLang }) {
   const router = useRouter();
   const { query, pathname, push } = router;
 
@@ -17,8 +17,8 @@ export default function Home() {
   };
 
   useEffect(() => {
-    const lang = query.lang || localStorage.getItem("lang") || "en";
-    if (query.lang !== lang) {
+    const lang = initialLang || localStorage.getItem("lang") || "en";
+    if (initialLang !== lang) {
       router.replace({ query: { ...query, lang } }, undefined, {
         shallow: true,
       });
@@ -114,3 +114,12 @@ export default function Home() {
     </>
   );
 }
+
+export const getServerSideProps = async (context) => {
+  const lang = context.query.lang || "en";
+  return {
+    props: {
+      initialLang: lang,
+    },
+  };
+};
