@@ -9,45 +9,41 @@ export default function App({ Component, pageProps }) {
 
   const [safeLang, setSafeLang] = useState("en");
 
-  const supportedLangs = ["en", "ru"]; // Define your supported languages
-  const [isLangReady, setIsLangReady] = useState(false); // To track when language is ready
+  const supportedLangs = ["en", "ru"];
+  const [isLangReady, setIsLangReady] = useState(false); 
 
   const isValidLang = (lang) => supportedLangs.includes(lang);
 
   useEffect(() => {
-    // Get lang from query or fallback to 'en'
+  
     const queryLang = query.lang || "en";
-
-    // Check if lang is valid and update state accordingly
     if (isValidLang(queryLang)) {
-      setSafeLang(queryLang); // Set valid language
-      localStorage.setItem("lang", queryLang); // Save to localStorage
+      setSafeLang(queryLang); 
+      localStorage.setItem("lang", queryLang); 
     } else {
-      setSafeLang("en"); // Fallback to 'en' if invalid
-      localStorage.setItem("lang", "en"); // Save 'en' to localStorage
+      setSafeLang("en");
+      localStorage.setItem("lang", "en");
       router.replace({ pathname, query: { ...query, lang: "en" } }, undefined, {
         shallow: true,
       });
     }
     setIsLangReady(true); 
-  }, [query.lang]); // Trigger when query.lang changes
+  }, [query.lang]); 
 
   useEffect(() => {
-    // Get the lang from localStorage if available
     const savedLang = localStorage.getItem("lang");
 
-    // If there's no lang saved in localStorage, default to 'en'
     if (savedLang && isValidLang(savedLang)) {
       setSafeLang(savedLang);
     } else {
       setSafeLang("en");
-      localStorage.setItem("lang", "en"); // Default to 'en' in localStorage
+      localStorage.setItem("lang", "en");
     }
     setIsLangReady(true); 
-  }, []); // This runs once when the component mounts
+  }, []); 
 
    if (!isLangReady) {
-    return null; // Return nothing until the language is set
+    return null; 
   }
 
   return (
