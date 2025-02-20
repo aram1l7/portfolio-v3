@@ -6,33 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-export default function Home({ initialLang }) {
-  const router = useRouter();
-  const { query, pathname, push } = router;
-
-  const onChangeLang = (lng) => {
-    push({ pathname, query: { ...query, lang: lng } }, undefined, {
-      shallow: true,
-    });
-  };
-
-  useEffect(() => {
-    const lang = initialLang || localStorage.getItem("lang") || "en";
-    if (initialLang !== lang) {
-      router.replace({ query: { ...query, lang } }, undefined, {
-        shallow: true,
-      });
-    }
-  }, [query.lang]);
-
-  useEffect(() => {
-    if (query.lang) {
-      localStorage.setItem("lang", query.lang);
-    }
-  }, [query.lang]);
-
-  const lang = query.lang || "en";
-
+export default function Home({ initialLang, lang, onChangeLang }) {
   return (
     <>
       <Head>
@@ -96,7 +70,9 @@ export default function Home({ initialLang }) {
           <div className="flex flex-col gap-2">
             <p className="font-semibold">{dictionary[lang].contactMe}</p>
             <p
-              dangerouslySetInnerHTML={{ __html: dictionary[lang].contactHtml }}
+              dangerouslySetInnerHTML={{
+                __html: dictionary[lang].contactHtml,
+              }}
             ></p>
           </div>
           <div>

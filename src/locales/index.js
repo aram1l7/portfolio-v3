@@ -40,9 +40,9 @@ export const dictionary = {
     name: "Арам Мартиросян",
     role: "Full Stack Javascript разработчик",
     info: `Я Full Stack Javascript разработчик с опытом более 5 лет, фокусирован на React(5+ лет), 
-    React Native и Node.js(2+ года). Работал в развивающихся стартапах, а также в международных компаниях среднего размера. Работал в разных сферах - блокчейн, финтех, медтех, ИИ. В нынешнее время открыт для работы на следующих позициях: Frontend, Backend(Node.js), Full Stack`,
+    React Native и Node.js(2+ года). Работал в развивающихся стартапах, а также в международных компаниях среднего размера. Работал в разных сферах - блокчейн, финтех, медтех, ИИ. В настоящее время открыт для работы на следующих позициях: Frontend, Backend(Node.js), Full Stack`,
     aboutMe: "Обо мне",
-    contactMe: "Связаться со мной",
+    contactMe: "Для связи",
     contactHtml: `Чтобы обсудить проект можете написать сообщение на
               <a
                 class="text-blue-500 hover:underline transition-all ease-in duration-200"
